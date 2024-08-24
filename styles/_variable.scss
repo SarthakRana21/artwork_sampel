@@ -1,0 +1,48 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// colors
+$soft-cream: '#F7F4F1';
+$light-awqua: '#A4D3E1';
+$warm-brown: '#8B5E3C';
+$olive-green: '#7D8F59';
+$netural-gray: '#B0B0B0';
+
+
+// Typography
+$heading-font: "Bree Serif", serif;
+$body-font: "Noto Sans", sans-serif;
+
+
+// font weights
+$regular: 400;
+$medium: 500;
+
+
+// others
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{ 
+    font-family: $heading-font;
+    font-weight: $medium;
+}
+
+p{
+    font-family: $body-font;
+}
