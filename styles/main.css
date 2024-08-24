@@ -112,6 +112,7 @@ header {
 }
 .carousel .carousel-inner .carousel-item .item-content {
   font-size: 1.7rem;
+  text-align: end;
   color: #8B5E3C;
   margin: 10% 10%;
 }
@@ -125,6 +126,8 @@ header {
   border: 2px solid #91a367;
   cursor: pointer;
   font-weight: 500;
+}
+.carousel .carousel-inner .carousel-item .item-content button span {
   display: flex;
   align-items: center;
   gap: 10px;

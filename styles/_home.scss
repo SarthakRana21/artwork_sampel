@@ -35,7 +35,7 @@
 
             .item-content {
                 font-size: 1.7rem;
-                // text-align: end;
+                text-align: end;
                 color: $warm-brown;
                 margin: 10% 10%;
                 
@@ -50,10 +50,12 @@
                     border: 2px solid $light-olive-green;
                     cursor: pointer;
                     font-weight: $medium;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-
+                    
+                    span{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
                     &:hover {
                         color: $light-olive-green;
                         background-color: $soft-cream;
