@@ -7,9 +7,66 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <h2>Test</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates?</p>
+   <header>
+    <div class="navbar">
+        <div class="logo_section">
+            <a href="/"><img src="./images/Image_6.jpg" alt="logo" style="width: 100px;"></a>
+        </div>
+        <div class="navLinks">
+            <li class="navList">
+                <ul>Home <ion-icon name="home-outline"></ion-icon></ul>
+                <ul>Order <ion-icon name="bag-handle-outline"></ion-icon></ul>
+                <ul>Cart <ion-icon name="cart-outline"></ion-icon></ul>
+                <ul>Contact <ion-icon name="mail-outline"></ion-icon></ul>
+            </li>
+        </div>
+    </div>
+   </header>
 
+   <main>
+    <div class="hero_section">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/Image_4.png" alt="Image 1">
+                    <div class="item-content">
+                        <h2>Natural Origin</h2>
+                        <p>Sourced from the best farms</p>
+                        <button>Order Now <ion-icon name="bag-handle-outline"></ion-icon></button>
+                    </div>
+                    
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Image_1.jpg" alt="Image 2">
+                    <div class="item-content">
+                        <h2>Fast Deliver</h2>
+                        <p>Get your order<br />delivered quickly</p>
+                        <button>Order Now <ion-icon name="bag-handle-outline"></ion-icon></button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Image_3.jpg" alt="Image 3">
+                    <div class="item-content">
+                        <h2>Pure Donkey Milk</h2>
+                        <p>Exprience the purity of nature</p>
+                        <button>Order Now <ion-icon name="bag-handle-outline"></ion-icon></button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    
+   </main>
+
+   <footer></footer>
+
+
+   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="./script/index.js"></script>
 </body>

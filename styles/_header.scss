@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 0 2%;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.logo_section{
+    cursor: pointer;
+    padding-top: 1%;
+}
+
+.navLinks {
+    width: auto;
+    padding: 2%;
+    border-radius: 20px;
+    background-color: $soft-cream;
+}
+.navList{
+    display: flex;
+    gap: 2rem;
+    color: $warm-brown;
+    font-family: $heading-font;
+    font-weight: $medium;
+
+    ul {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: .3s ease all;
+        font-size: 1.3rem;
+    }
+    ul:hover {
+        color: $olive-green;
+        transition: .3s ease all;
+    }
+    
+}
+

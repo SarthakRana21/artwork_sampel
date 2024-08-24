@@ -1,0 +1,88 @@
+.hero_section {
+    width: 100%;
+    padding: 10px 2%;
+    margin-top: 5%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: calc(100% * (number of slides + 2));
+        
+        .carousel-item {
+            min-width: 100vw; // Use viewport width for full-width slides
+            height: 70vh;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: safe;
+            justify-content: end;
+            position: relative;
+            
+            img {
+                position: absolute;
+                width: 100%;
+                height: auto; // Maintain aspect ratio
+                border-radius: 10px;
+                z-index: -1;
+            }
+
+            .item-content {
+                font-size: 1.7rem;
+                // text-align: end;
+                color: $warm-brown;
+                margin: 10% 10%;
+                
+
+                button {
+                    font-size: 1.3rem;
+                    border-radius: 25px;
+                    padding: 10px 15px;
+                    color: $soft-cream;
+                    background-color: $light-olive-green;
+                    margin-top: 15px;
+                    border: 2px solid $light-olive-green;
+                    cursor: pointer;
+                    font-weight: $medium;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:hover {
+                        color: $light-olive-green;
+                        background-color: $soft-cream;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $light-olive-green;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &.prev {
+            left: 2%;
+            border-radius: 100px;
+        }
+
+        &.next {
+            right: 2%;
+            border-radius: 100px;
+        }
+    }
+}

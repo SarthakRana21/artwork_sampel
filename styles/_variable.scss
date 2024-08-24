@@ -4,11 +4,12 @@
 
 
 // colors
-$soft-cream: '#F7F4F1';
-$light-awqua: '#A4D3E1';
-$warm-brown: '#8B5E3C';
-$olive-green: '#7D8F59';
-$netural-gray: '#B0B0B0';
+$soft-cream: #F7F4F1;
+$light-aqua: #A4D3E1;
+$warm-brown: #8B5E3C;
+$olive-green: #7D8F59;
+$light-olive-green: #91a367;
+$netural-gray: #B0B0B0;
 
 
 // Typography
@@ -28,6 +29,9 @@ $medium: 500;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+body {
+    background-color: $soft-cream;
 }
 
 li{
