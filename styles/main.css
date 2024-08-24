@@ -95,7 +95,7 @@ header {
 }
 .carousel .carousel-inner .carousel-item {
   min-width: 100vw;
-  height: 70vh;
+  height: 66vh;
   border-radius: 10px;
   flex-shrink: 0;
   display: flex;
