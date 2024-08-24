@@ -111,10 +111,11 @@ header {
   z-index: -1;
 }
 .carousel .carousel-inner .carousel-item .item-content {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   text-align: end;
   color: #8B5E3C;
   margin: 10% 10%;
+  cursor: default;
 }
 .carousel .carousel-inner .carousel-item .item-content button {
   font-size: 1.3rem;
