@@ -1,0 +1,23 @@
+// mixins
+
+@mixin order-now-btn {
+    font-size: 1.3rem;
+    border-radius: 25px;
+    padding: 10px 15px;
+    color: $soft-cream;
+    background-color: $light-olive-green;
+    margin-top: 20px;
+    border: 2px solid $light-olive-green;
+    cursor: pointer;
+    font-weight: $medium;
+    
+    span{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &:hover {
+        color: $light-olive-green;
+        background-color: $soft-cream;
+    }
+}

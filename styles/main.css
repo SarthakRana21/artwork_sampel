@@ -21,7 +21,7 @@ a {
 
 h2 {
   font-family: "Bree Serif", serif;
-  font-weight: 500;
+  font-weight: 550;
 }
 
 p {
@@ -61,7 +61,7 @@ header {
   gap: 2rem;
   color: #8B5E3C;
   font-family: "Bree Serif", serif;
-  font-weight: 500;
+  font-weight: 550;
 }
 .navList ul {
   cursor: pointer;
@@ -79,7 +79,7 @@ header {
 .hero_section {
   width: 100%;
   padding: 10px 2%;
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .carousel {
@@ -126,7 +126,7 @@ header {
   margin-top: 15px;
   border: 2px solid #91a367;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 550;
 }
 .carousel .carousel-inner .carousel-item .item-content button span {
   display: flex;
@@ -156,4 +156,87 @@ header {
 .carousel .carousel-control.next {
   right: 2%;
   border-radius: 100px;
+}
+
+.product_section {
+  width: 100%;
+  margin-top: 5%;
+  padding: 0 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8B5E3C;
+  gap: 20px;
+  font-size: 2.2rem;
+}
+.product_section .product-content {
+  width: 100%;
+  text-align: center;
+}
+.product_section .product-content .product-images {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin: 2% 0;
+}
+.product_section .product-content .product-images img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #8B5E3C;
+}
+.product_section .product-content .product-features ul {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  font-weight: 550;
+  font-family: "Noto Sans", sans-serif;
+}
+.product_section .product-content .product-features ul li {
+  color: #B0B0B0;
+}
+.product_section .product-content .product-features .product-bottom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+}
+.product_section .product-content .product-features .product-bottom img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -1;
+}
+.product_section .product-content .product-features .product-bottom div {
+  margin-top: 10%;
+  margin-right: 5%;
+  text-align: end;
+}
+.product_section .product-content .product-features .product-bottom div button {
+  font-size: 1.3rem;
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: #F7F4F1;
+  background-color: #91a367;
+  margin-top: 15px;
+  border: 2px solid #91a367;
+  cursor: pointer;
+  font-weight: 550;
+}
+.product_section .product-content .product-features .product-bottom div button span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product_section .product-content .product-features .product-bottom div button:hover {
+  color: #91a367;
+  background-color: #F7F4F1;
 }/*# sourceMappingURL=main.css.map */

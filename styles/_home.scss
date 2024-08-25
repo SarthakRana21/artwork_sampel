@@ -1,7 +1,9 @@
+@use './mixins';
+
 .hero_section {
     width: 100%;
     padding: 10px 2%;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .carousel {
@@ -42,25 +44,7 @@
                 
 
                 button {
-                    font-size: 1.3rem;
-                    border-radius: 25px;
-                    padding: 10px 15px;
-                    color: $soft-cream;
-                    background-color: $light-olive-green;
-                    margin-top: 15px;
-                    border: 2px solid $light-olive-green;
-                    cursor: pointer;
-                    font-weight: $medium;
-                    
-                    span{
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                    }
-                    &:hover {
-                        color: $light-olive-green;
-                        background-color: $soft-cream;
-                    }
+                    @include order-now-btn;
                 }
             }
         }
@@ -89,3 +73,81 @@
         }
     }
 }
+
+.product_section{
+    width: 100%;
+    margin-top: 5%;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $warm-brown;
+    gap: 20px;
+    // color: $olive-green;
+    font-size: 2.2rem;
+    
+    .product-content{
+        width: 100%;
+        text-align: center;
+        
+
+        .product-images{
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            margin: 2% 0;
+
+            img{
+                width: 150px;
+                border-radius: 50%;
+                border: 3px solid $warm-brown;
+            }
+        }
+
+        .product-features{
+
+            ul{
+                display: flex;
+                gap: 10px;
+                text-align: center;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 1.2rem;
+                font-weight: $medium;
+                font-family: $body-font;
+
+                li{
+                    color: $netural-gray;
+                }
+            }
+            .product-bottom{
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                position: relative;
+
+                img{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 80%;
+                    object-fit: contain;
+                    z-index: -1;
+                }
+                div{
+                    margin-top: 10%;
+                    text-align: end;
+
+                    button{
+                        @include order-now-btn;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
