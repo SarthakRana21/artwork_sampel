@@ -1,7 +1,7 @@
 // mixins
 
 @mixin order-now-btn {
-    
+
     font-size: 1.3rem;
     border-radius: 25px;
     padding: 10px 15px;
@@ -20,5 +20,16 @@
     &:hover {
         color: $light-olive-green;
         background-color: $soft-cream;
+    }
+
+
+    @media screen and (max-width: 1300px){
+        font-size: 1rem;
+        padding: 7px 12px;
+    }
+
+    @media (max-width: 676px){
+        font-size: 0.95rem;
+        padding: 5px 10px;
     }
 }

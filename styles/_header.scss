@@ -45,3 +45,15 @@ header {
     
 }
 
+
+@media (max-width: 676px) {
+    .logo_section a img{
+        width: 50px !important;
+    }
+   .navList {
+    gap: 1rem !important;
+    ul {
+        font-size: .8rem !important;
+       }
+   }
+}

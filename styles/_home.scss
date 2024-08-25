@@ -1,5 +1,9 @@
 @use './mixins';
 
+.hidden{
+    display: none;
+}
+
 .hero_section {
     width: 100%;
     padding: 10px 2%;
@@ -23,7 +27,7 @@
             border-radius: 10px;
             flex-shrink: 0;
             display: flex;
-            align-items: safe;
+            align-items: center;
             justify-content: end;
             position: relative;
             
@@ -109,13 +113,15 @@
 
             ul{
                 display: flex;
-                gap: 10px;
+                gap: 20px;
+                row-gap: 30px;
                 text-align: center;
                 align-items: center;
                 justify-content: space-evenly;
                 font-size: 1.2rem;
                 font-weight: $medium;
                 font-family: $body-font;
+                flex-wrap: wrap;
 
                 li{
                     color: $netural-gray;
@@ -162,6 +168,12 @@
 	width: 100%;
 	height: 300px;
 	position: relative;
+
+    h2{
+        text-align: center;
+        font-size: 2.2rem;
+        color: $warm-brown;
+    }
 }
 
 .arrow{
@@ -193,7 +205,7 @@
 	display:flex;
 	align-items: center;
 	position: relative;
-    
+
 	.slider__item{
 		width: 20%;
 		height: 200px;
@@ -279,5 +291,179 @@
     .footer-bottom{
         text-align: center;
         margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 1300px) {
+
+    .carousel{
+        
+        .carousel-item {
+            height: 60vh;
+
+            .item-content{
+                font-size: 1rem !important;
+
+               
+            }
+        }
+        .carousel-control{
+            top: 40%;
+        }
+    } 
+
+    .product_section .product-content {
+        flex-direction: column;
+        align-items: center;
+
+        h5{
+            font-size: 1.5rem;
+        }
+        
+    }
+
+    .product_section .product-images img {
+        width: 120px !important;
+    }
+    .product_section h2{
+        font-size: 2rem;
+    }
+    .product-bottom{
+        div {
+            h2{
+                font-size: 2rem;
+            } 
+        }
+    }
+    .footer-content {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+
+    .product_section .product-images img {
+        width: 95px;
+    }
+   
+    .carousel .carousel-item {
+        height: 40vh !important;
+    }
+    
+        .next{
+            right: 0 !important;
+        }
+        .prev{
+            left: 0 !important;
+        }
+    
+    .carousel .carousel-control {
+        top: 50%;
+    }
+
+    .footer-content {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 868px) {
+    .product_section {
+        font-size: 1.8rem;
+    }
+
+    .carousel .carousel-item {
+        height: 45vh !important;
+        align-items: start !important;
+        justify-content: center !important;
+
+        img {
+            top: 35%;
+        }
+    }
+    .item-content{
+        text-align: center !important;
+        
+        button{
+            margin-top: 10px !important;
+        }
+    }
+    .carousel-control {
+        .next{
+            right: 0;
+        }
+        .prev{
+            left: 0;
+        }
+    }
+    .footer-content {
+        font-size: 0.8rem;
+    }
+    .show{
+        display: none;
+    }
+    .hidden{
+        display: block;
+    }
+    .product-images{
+        // margin: 5% 0 !important;
+    }
+    .product-bottom div{
+        width: 50% !important;
+    }
+    .product-bottom{
+        margin: 3% 0;
+
+        div h2 {
+            font-size: 1.5rem !important;
+        }
+    }
+    .product-features ul{
+        margin: 5% 0 ;
+    }
+    
+}
+
+@media (max-width: 676px) {
+
+    h2{
+        font-size: 1rem !important;
+    }
+    h5{
+        font-size: 1rem !important;
+    }
+
+    .product-features ul li{
+        font-size: 1rem !important;
+    }
+
+    .product_section .product-images img {
+        width: 80px !important;
+    }
+    
+    .carousel .carousel-item {
+        height: 50vh !important;
+    }
+    .carousel .carousel-control{
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .arrow{
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .product_section .product-content .product-images {
+        margin: 7% 0;
+    }
+    .product_section{
+        margin-top: 0;
+    }
+    .product-bottom img{
+        display: none;
+    }
+    .product_section .product-content .product-features .product-bottom div {
+        width: 100% !important;
+        text-align: center;
     }
 }
