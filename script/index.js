@@ -4,7 +4,7 @@ const carouselInner = document.querySelector('.carousel-inner');
 const items = Array.from(document.querySelectorAll('.carousel-item'));
 const totalItems = items.length;
 let index = 1; // Start from the first actual slide
-const intervalTime = 10000; // Time between slides in milliseconds
+const intervalTime = 7000; // Time between slides in milliseconds
 let autoSlideInterval;
 
 // Clone the first and last items for seamless looping
