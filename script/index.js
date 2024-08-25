@@ -67,3 +67,4 @@ prevBtn.addEventListener('click', () => {
 // Initialize the slider
 showSlide(index);
 startAutoSlide();
+

@@ -123,7 +123,7 @@ header {
   padding: 10px 15px;
   color: #F7F4F1;
   background-color: #91a367;
-  margin-top: 15px;
+  margin-top: 20px;
   border: 2px solid #91a367;
   cursor: pointer;
   font-weight: 550;
@@ -217,7 +217,7 @@ header {
 }
 .product_section .product-content .product-features .product-bottom div {
   margin-top: 10%;
-  margin-right: 5%;
+  margin-right: 2%;
   text-align: end;
 }
 .product_section .product-content .product-features .product-bottom div button {
@@ -226,7 +226,7 @@ header {
   padding: 10px 15px;
   color: #F7F4F1;
   background-color: #91a367;
-  margin-top: 15px;
+  margin-top: 20px;
   border: 2px solid #91a367;
   cursor: pointer;
   font-weight: 550;
