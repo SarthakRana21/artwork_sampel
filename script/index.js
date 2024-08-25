@@ -68,3 +68,75 @@ prevBtn.addEventListener('click', () => {
 showSlide(index);
 startAutoSlide();
 
+
+
+class Slider {
+	constructor($el, interval = 3000) { // Added interval parameter with a default value
+		this.$el = $el;
+		this.$refs = {
+			items: [...document.querySelectorAll('[data-slider]', this.$el)],
+		};
+		this.length = this.$refs.items.length - 1;
+		this.interval = interval; // Store the interval value
+		this.startAutoSlide(); // Start the automatic sliding
+	}
+
+	next() {
+		this.slide('next');
+	}
+
+	prev() {
+		this.slide('prev');
+	}
+
+	slide(direction) {
+		this.$refs.items.forEach(el => {
+			const pos = Number(el.getAttribute('data-position'));
+			const next = (pos + 1) > this.length ? 0 : pos + 1;
+			const prev = (pos - 1) < 0 ? this.length : pos - 1;
+			const go = direction === 'next' ? next : prev;
+
+			el.setAttribute('data-position', go);
+		});
+	}
+
+	jump(pos) {
+		for (let i = 0; i < pos; i++) {
+			const timeout = setTimeout(() => {
+				this.slide('prev');
+				clearTimeout(timeout); // Clear the timeout after execution
+			}, 100);
+		}
+	}
+
+	startAutoSlide() {
+		this.autoSlide = setInterval(() => {
+			this.next(); // Automatically go to the next slide
+		}, this.interval);
+	}
+
+	stopAutoSlide() {
+		clearInterval(this.autoSlide); // Stop the automatic sliding
+	}
+}
+
+const slider = new Slider(document.querySelector('[data-component="slider"]'), 5000); // Initialize with a 5-second interval
+
+document.querySelector('.arrow--prev').addEventListener('click', () => {
+	slider.prev();
+	slider.stopAutoSlide(); // Stop auto slide on manual interaction
+});
+
+document.querySelector('.arrow--next').addEventListener('click', () => {
+	slider.next();
+	slider.stopAutoSlide(); // Stop auto slide on manual interaction
+});
+
+document.querySelectorAll('.slider__item').forEach(sliderItem => {
+	sliderItem.addEventListener('click', () => {
+		const pos = Number(sliderItem.getAttribute('data-position'));
+
+		slider.jump(pos);
+		slider.stopAutoSlide(); // Stop auto slide on manual interaction
+	});
+});
