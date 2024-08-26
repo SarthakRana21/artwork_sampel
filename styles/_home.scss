@@ -457,6 +457,13 @@
   }
 }
 
+
+
+@media (max-width: 868px) {
+    .show {
+        display: none;
+    }
+}
 @media (max-width: 676px) {
   h5 {
     font-size: 1rem !important;
