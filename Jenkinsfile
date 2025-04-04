@@ -4,6 +4,7 @@ pipeline {
     }
 
     agent any
+
     stages {
         stage('Cleanup Docker') {
             steps {
@@ -18,16 +19,14 @@ pipeline {
                 '''
             }
         }
-    }
 
-    stages {
         stage('Cloning our Git') {
             steps {
                 git branch: 'main', url: "https://github.com/SarthakRana21/artwork_sampel.git"
             }
         }
 
-        stage('Docker Image bulding') {
+        stage('Docker Image Building') {
             steps {
                 sh "docker-compose up --build -d"
             }
