@@ -4,6 +4,21 @@ pipeline {
     }
 
     agent any
+    stages {
+        stage('Cleanup Docker') {
+            steps {
+                sh '''
+                echo "Stopping and removing old containers..."
+                docker-compose down --volumes --remove-orphans || true
+                
+                echo "Removing unused Docker images and cache..."
+                docker system prune -a -f || true
+                
+                echo "Cleanup completed."
+                '''
+            }
+        }
+    }
 
     stages {
         stage('Cloning our Git') {
