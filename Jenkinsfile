@@ -1,5 +1,5 @@
 pipeline {
-    enviornment {
+    environment {
         name = "artwork-sample"
     }
 
